@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 5573206139015784052}
   - component: {fileID: 5573206139015784053}
   - component: {fileID: 5573206139015784054}
+  - component: {fileID: 8252356865731472438}
   m_Layer: 0
-  m_Name: Cube_5
+  m_Name: Block_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -62,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d9e1fd0071733456d83e372004dc7451, type: 2}
+  - {fileID: 2100000, guid: 4ee65dd72e91c4775b33f38b5f9da7f8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -97,6 +98,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8252356865731472438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5573206139015784056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50ceed0a1c59145ee88c7744ed911b05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5573206139245032309
 GameObject:
   m_ObjectHideFlags: 0
@@ -109,8 +122,9 @@ GameObject:
   - component: {fileID: 5573206139245032305}
   - component: {fileID: 5573206139245032306}
   - component: {fileID: 5573206139245032307}
+  - component: {fileID: 4247774239015205376}
   m_Layer: 0
-  m_Name: Cube_1
+  m_Name: Block_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -159,7 +173,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d9e1fd0071733456d83e372004dc7451, type: 2}
+  - {fileID: 2100000, guid: 4ee65dd72e91c4775b33f38b5f9da7f8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -194,6 +208,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4247774239015205376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5573206139245032309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50ceed0a1c59145ee88c7744ed911b05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5573206139505621808
 GameObject:
   m_ObjectHideFlags: 0
@@ -250,6 +276,8 @@ MonoBehaviour:
   - {fileID: 5573206139899504403}
   - {fileID: 5573206139015784056}
   CubeMaterial: {fileID: 0}
+  MinValue: 0
+  MaxValue: 45
 --- !u!1 &5573206139899504403
 GameObject:
   m_ObjectHideFlags: 0
@@ -262,8 +290,9 @@ GameObject:
   - component: {fileID: 5573206139899504431}
   - component: {fileID: 5573206139899504400}
   - component: {fileID: 5573206139899504401}
+  - component: {fileID: 4778078561713206644}
   m_Layer: 0
-  m_Name: Cube_4
+  m_Name: Block_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -312,7 +341,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d9e1fd0071733456d83e372004dc7451, type: 2}
+  - {fileID: 2100000, guid: 4ee65dd72e91c4775b33f38b5f9da7f8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -347,6 +376,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4778078561713206644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5573206139899504403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50ceed0a1c59145ee88c7744ed911b05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5573206140444099987
 GameObject:
   m_ObjectHideFlags: 0
@@ -359,8 +400,9 @@ GameObject:
   - component: {fileID: 5573206140444100015}
   - component: {fileID: 5573206140444099984}
   - component: {fileID: 5573206140444099985}
+  - component: {fileID: 9112432757523540302}
   m_Layer: 0
-  m_Name: Cube_2
+  m_Name: Block_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -409,7 +451,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d9e1fd0071733456d83e372004dc7451, type: 2}
+  - {fileID: 2100000, guid: 4ee65dd72e91c4775b33f38b5f9da7f8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -444,6 +486,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &9112432757523540302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5573206140444099987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50ceed0a1c59145ee88c7744ed911b05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5573206140613042391
 GameObject:
   m_ObjectHideFlags: 0
@@ -456,8 +510,9 @@ GameObject:
   - component: {fileID: 5573206140613042387}
   - component: {fileID: 5573206140613042388}
   - component: {fileID: 5573206140613042389}
+  - component: {fileID: 7040912734278986681}
   m_Layer: 0
-  m_Name: Cube_3
+  m_Name: Block_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -506,7 +561,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d9e1fd0071733456d83e372004dc7451, type: 2}
+  - {fileID: 2100000, guid: 4ee65dd72e91c4775b33f38b5f9da7f8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -541,3 +596,15 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7040912734278986681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5573206140613042391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50ceed0a1c59145ee88c7744ed911b05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

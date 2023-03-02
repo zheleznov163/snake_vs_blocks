@@ -4,5 +4,17 @@ using UnityEngine;
 
 public class Step : MonoBehaviour
 {
-    public GameObject[] Cubes = new GameObject[5];
+    public Block[] Blocks = new Block[5];
+
+    public Material CubeMaterial;
+
+    public int MinValue = 0;
+    public int MaxValue = 45;
+
+    public void setValues()
+    {
+        foreach (Block block in Blocks)
+        {
+        }
+    }
 }
