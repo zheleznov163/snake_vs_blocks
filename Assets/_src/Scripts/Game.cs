@@ -15,6 +15,7 @@ public class Game : MonoBehaviour
     public ScoreCounter score;
 
     // UI
+    public UIController UIcontroller;
 
     public enum Status
     {
