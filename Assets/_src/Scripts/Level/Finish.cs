@@ -9,7 +9,7 @@ public class Finish : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.TryGetComponent(out Snake snake))
+        if (other.TryGetComponent(out Head snakeHead))
             SnakeFinished?.Invoke();
     }
 }
