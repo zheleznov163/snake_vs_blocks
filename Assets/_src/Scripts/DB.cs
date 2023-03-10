@@ -23,7 +23,7 @@ public class DB : MonoBehaviour
         set => SetInt(DB.LEVEL_INDEX, value);
     }
 
-    public int SnakeLenght
+    public int SnakeLength
     {
         get => PlayerPrefs.GetInt(DB.SNAKE_LENGTH, 0);
         set => SetInt(DB.SNAKE_LENGTH, value);
