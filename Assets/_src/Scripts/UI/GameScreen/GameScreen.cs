@@ -14,6 +14,9 @@ public class GameScreen : MonoBehaviour
     public void setScore(int score) =>
         Score.text = score.ToString();
 
+    public void setProgress(float value) =>
+        Slider.value = value;
+
     public void setCurrentLevel(int level)
     {
         LevelCurrent.text = level.ToString();

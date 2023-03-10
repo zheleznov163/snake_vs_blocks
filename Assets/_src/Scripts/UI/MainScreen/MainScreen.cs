@@ -9,6 +9,7 @@ public class MainScreen : MonoBehaviour
 
     public void setLevel(int value) =>
         level.text = value.ToString();
+
     public void setRecord(int value) =>
-        level.text = value.ToString();
+        record.text = value.ToString();
 }

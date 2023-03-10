@@ -14,6 +14,11 @@ public class UIController : MonoBehaviour
         loseScreen.setScore(score);
     }
 
+    public void setProgress(float value)
+    {
+        gameScreen.setProgress(value);
+    }
+
     public void setRecord(int record)
     {
         loseScreen.setRecord(record);

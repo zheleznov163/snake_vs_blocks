@@ -13,6 +13,7 @@ public class Game : MonoBehaviour
     public DB db;
     public Level level;
     public ScoreCounter score;
+    public ProgressCounter progress;
 
     // UI
     public UIController UIcontroller;
@@ -54,6 +55,8 @@ public class Game : MonoBehaviour
                 snake.MoveByX(control.MouseDeltaX * settings.ControllSensetivity);
 
                 Camera.moveTo(snake.head.gameObject);
+
+                UIcontroller.setProgress(progress.culc(snake));
                 break;
             case Status.Win:
                 snake.Run(settings.Speed);
