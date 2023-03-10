@@ -155,6 +155,7 @@ public class Snake : MonoBehaviour
         }
         else
         {
+            status = Status.Stop;
             Died?.Invoke();
         }
         return 0;
