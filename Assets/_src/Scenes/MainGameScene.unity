@@ -363,7 +363,7 @@ MonoBehaviour:
   SpeedTail: 4
   DefaultSnakeLength: 4
   startLevel: 8
-  stepsCount: 5
+  stepsCount: 150
 --- !u!114 &493514075
 MonoBehaviour:
   m_ObjectHideFlags: 0
