@@ -34,14 +34,15 @@ public class Block : MonoBehaviour
     public void setPoints(int value)
     {
         points = value;
+        color = points;
         updateView();
     }
 
-    //private Color color
-    //{
-    //    get => MeshRenderer.material.GetColor(ShaderKey.COLOR);
-    //    set => MeshRenderer.material.SetColor(ShaderKey.COLOR, value);
-    //}
+    private float color
+    {
+        get => MeshRenderer.material.GetFloat(ShaderKey.VALUE);
+        set => MeshRenderer.material.SetFloat(ShaderKey.VALUE, value);
+    }
 
     private void Awake()
     {
@@ -65,6 +66,6 @@ public class Block : MonoBehaviour
 
     private class ShaderKey
     {
-        public static string COLOR = "_Color";
+        public static string VALUE = "_Value";
     }
 }

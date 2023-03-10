@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-7173526511959062989
+--- !u!114 &-1394231801399781010
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,8 +20,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Block
-  m_Shader: {fileID: -6465566751694194690, guid: f594799f53d034387bdf715fcfd503a2, type: 3}
+  m_Name: ColoredBlock
+  m_Shader: {fileID: -6465566751694194690, guid: 1e67a0ba9c6754f9b9fcbe363f5fb04b, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 2
@@ -47,11 +47,8 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Max: 0
-    - _Min: 0
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Value: 0
-    m_Colors:
-    - _Color: {r: 0.9811321, g: 0.35635456, b: 0.35635456, a: 0}
+    - _Value: 1
+    m_Colors: []
   m_BuildTextureStacks: []
