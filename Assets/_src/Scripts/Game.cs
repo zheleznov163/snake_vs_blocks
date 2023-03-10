@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 public class Game : MonoBehaviour
@@ -36,7 +37,6 @@ public class Game : MonoBehaviour
     {
         snake.Died += Lose;
         level.Finish.SnakeFinished += Win;
-        StartGame();
     }
 
     public void OnDestroy()
@@ -69,29 +69,67 @@ public class Game : MonoBehaviour
     private void FixedUpdate()
     {
         score.ScoreCurrent += snake.damage(settings.DamageCooldown);
+        UIcontroller.setScore(score.ScoreCurrent);
     }
 
     private void InitLevel()
     {
-        snake.addTail(db.SnakeLenght != 0 ? db.SnakeLenght : settings.DefaultSnakeLength);
+        snake.addTail(db.SnakeLength != 0 ? db.SnakeLength : settings.DefaultSnakeLength);
         level.initLevel(settings.startLevel, settings.stepsCount);
+
+        progress.setFinish(level.Finish.transform.position);
+        progress.setStart(snake.transform.position);
+
+        score.ScoreCurrent = db.ScoreCurrent;
+
+        UIcontroller.setScore(score.ScoreCurrent);
+        UIcontroller.setRecord(db.ScoreRecord);
+        UIcontroller.setCurrentLevel(db.LevelIndex + 1);
     }
 
-    private void StartGame()
+    public void StartGame()
     {
         status = Status.Play;
+        snake.status = Snake.Status.Run;
+        Debug.Log("Start game");
+        UIcontroller.mainScreen.gameObject.SetActive(false);
+    }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     private void Lose()
     {
         status = Status.Lose;
+
+        db.ScoreCurrent = 0;
+        db.SnakeLength = 0;
+
+        if (score.ScoreCurrent > db.ScoreRecord)
+            db.ScoreRecord = score.ScoreCurrent;
+
+        UIcontroller.setRecord(db.ScoreRecord);
+        UIcontroller.loseScreen.gameObject.SetActive(true);
+
         Debug.Log("LOSE");
+    }
+
+    private IEnumerator WaitToRestart(int sec)
+    {
+        yield return new WaitForSeconds(sec);
+        Restart();
     }
 
     private void Win()
     {
         status = Status.Win;
-
+        db.ScoreCurrent = score.ScoreCurrent;
+        db.LevelIndex += 1;
         Debug.Log("WIN");
+
+        StartCoroutine(WaitToRestart(2));
     }
+
 }
