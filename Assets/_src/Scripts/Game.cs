@@ -18,6 +18,7 @@ public class Game : MonoBehaviour
 
     // UI
     public UIController UIcontroller;
+    private AudioSource audio;
 
     public enum Status
     {
@@ -31,6 +32,7 @@ public class Game : MonoBehaviour
     public void Awake()
     {
         InitLevel();
+        audio = GetComponent<AudioSource>();
     }
 
     public void Start()
@@ -90,6 +92,7 @@ public class Game : MonoBehaviour
     public void StartGame()
     {
         status = Status.Play;
+        audio.Play();
         snake.status = Snake.Status.Run;
         Debug.Log("Start game");
         UIcontroller.mainScreen.gameObject.SetActive(false);
