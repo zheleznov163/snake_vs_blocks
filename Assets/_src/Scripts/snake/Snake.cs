@@ -13,11 +13,20 @@ public class Snake : MonoBehaviour
     public TMPro.TextMeshPro lengthText;
     public ParticleSystem damageEffect;
 
+    private AudioSource audio;
+    public AudioClip hitClip;
+    public AudioClip loseClip;
+
     public enum Status
     {
         Run,
         Stop,
         Bonus,
+    }
+
+    private void Awake()
+    {
+        audio = GetComponent<AudioSource>();
     }
 
     private Status _status = Status.Stop;
@@ -150,6 +159,7 @@ public class Snake : MonoBehaviour
         {
             Debug.Log("Damage");
             damageEffect.Play();
+            audio.PlayOneShot(hitClip);
             timerCooldown = cooldown;
             head.trigger.LastTouched.damage();
             removeTail(1);
@@ -157,6 +167,7 @@ public class Snake : MonoBehaviour
         }
         else
         {
+            audio.PlayOneShot(loseClip);
             status = Status.Stop;
             Died?.Invoke();
         }
