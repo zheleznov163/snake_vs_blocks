@@ -11,6 +11,7 @@ public class Snake : MonoBehaviour
     public GameObject segmentPrefab;
     public Head head;
     public TMPro.TextMeshPro lengthText;
+    public ParticleSystem damageEffect;
 
     public enum Status
     {
@@ -148,6 +149,7 @@ public class Snake : MonoBehaviour
         else if (listSegments.Count > 0)
         {
             Debug.Log("Damage");
+            damageEffect.Play();
             timerCooldown = cooldown;
             head.trigger.LastTouched.damage();
             removeTail(1);
